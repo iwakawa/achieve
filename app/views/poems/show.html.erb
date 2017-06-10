@@ -1,4 +1,10 @@
 <% @poem.each do |poem| %>
-  <%= poem.title %>
-  <%= poem.content %>
+
+<%= f.label :タイトル %>
+<%= f.text_field :title, class: 'form-control' %>
+<br>
+<%= f.label :内容 %>
+<%= f.text_field :content, class: 'form-control' %>
+
+
 <% end %>
