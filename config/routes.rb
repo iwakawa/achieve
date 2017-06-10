@@ -14,7 +14,7 @@ Rails.application.routes.draw do
    end
   end
 
-  resources :poems, only: [:index, :show] 
+  resources :poems, only: [:index, :show]
 
   root 'top#index'
 
