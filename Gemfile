@@ -47,6 +47,7 @@ group :development, :test do
   gem 'better_errors'
 end
 
+
 gem 'twitter-bootstrap-rails'
 
 gem 'rails_12factor', group: :production
@@ -58,3 +59,15 @@ gem 'rails_admin'
 gem 'cancan'
 
 gem 'activeresource'
+
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
+
+group :development do
+gem 'dotenv-rails'
+end
+
+gem 'carrierwave'
+gem 'mini_magick'
