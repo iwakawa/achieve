@@ -4,7 +4,6 @@ module ApplicationHelper
 
     unless user.provider.blank?
       img_url = user.image_url
-      image_url = "http://graph.facebook.com/v2.6/968324393270705/pic..."
     else
       img_url = 'no_image.png'
     end

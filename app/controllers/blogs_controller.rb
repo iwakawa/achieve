@@ -1,10 +1,19 @@
 class BlogsController < ApplicationController
- before_action :set_blog, only: [:edit, :update, :destroy]
+ before_action :set_blog, only: [:show, :edit, :update, :destroy]
  before_action :authenticate_user!
 
  def index
   @blogs = Blog.all
   @users = User.all
+  respond_to do |format|
+    format.html
+    format.js
+  end
+ end
+
+ def show
+  @comment = @blog.comments.build
+  @comments = @blog.comments
  end
 
  def new
