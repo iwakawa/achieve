@@ -72,5 +72,10 @@ class User < ActiveRecord::Base
   relationships.find_by(followed_id: other_user.id)
  end
 
+  #指定のユーザのフォローを解除する
+ def unfollow!(other_user)
+  relationships.find_by(followed_id: other_user.id).destroy
+ end
+
 
 end
