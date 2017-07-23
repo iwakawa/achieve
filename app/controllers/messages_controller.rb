@@ -28,7 +28,7 @@ class MessagesController < ApplicationController
   def create
     @message = @conversation.messages.build(message_params)
     if @message.save
-     redirect_to conversation_messages_path(@conversation)
+     redirect_to :action => "messages#index"
     end
   end
 
