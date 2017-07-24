@@ -6,7 +6,9 @@
     <!--users全体を確認-->
     <% @user.followed_users.each do |user| %>
       <div class="container-child col-md-2 col-sm-4 col-xs-6 ">
-        <%= profile_img(user) %>
+        <div class="image_size">
+         <%= profile_img(user) %>
+        </div>
         <br>
         <%= user.name %>
       </div>
@@ -19,7 +21,9 @@
   </div>
     <% @user.followers.each do |user| %>
         <div class="container-child col-md-2 col-sm-4 col-xs-6 ">
-        <%= profile_img(user) %>
+          <div class="image_size">
+           <%= profile_img(user) %>
+          </div>
         <br>
         <%= user.name %>
         </div>

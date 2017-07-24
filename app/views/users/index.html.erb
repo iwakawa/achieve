@@ -2,8 +2,10 @@
   <% @users.each do |user| %>
       <% if user.id != current_user.id %>
         <li>
-          <div class="item">
+          <div class="image_size">
             <%= profile_img(user) %>
+          </div>
+          <div class="item">
             <br>
             <%= link_to user.name, user %>
             <br>
