@@ -58,11 +58,14 @@
                  channel.bind('comment_created', function(data) {
                    alert(data.message);
                  });
+                 channel.bind('notification_created', function(data) {
+                  $('#unread_count').html(data.unread_counts);
+                 });
                </script>
               <% end %>
 
-              <%= link_to notifications_index_path do %>
-               <i class="fa fa-bell fa-1x"><%= @notifications_count %></i>
+              <%= link_to notifications_index_path, class: "navbar-brand" do %>
+               <i class="fa fa-bell fa-1x"><span id="unread_count"><%= @notifications_count %></span></i>
               <% end %>
 
             </ul>
